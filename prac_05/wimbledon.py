@@ -35,3 +35,15 @@ def display_results(champions, countries):
 
     print(f"\nThese {len(countries)} countries have won Wimbledon:")
     print(', '.join(countries))
+
+
+def main():
+    """Main program workflow."""
+    data = load_data('wimbledon.csv')
+    champions = get_champions(data)
+    countries = get_countries(data)
+    display_results(champions, countries)
+
+
+if __name__ == "__main__":
+    main()
