@@ -19,3 +19,9 @@ def get_champions(data):
         name = row[2]  # Champion name column
         champions[name] = champions.get(name, 0) + 1
     return champions
+
+
+def get_countries(data):
+    """Return sorted set of champion countries."""
+    countries = {row[1] for row in data}  # Country column
+    return sorted(countries)
