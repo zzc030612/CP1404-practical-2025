@@ -25,3 +25,13 @@ def get_countries(data):
     """Return sorted set of champion countries."""
     countries = {row[1] for row in data}  # Country column
     return sorted(countries)
+
+
+def display_results(champions, countries):
+    """Display processed data in required format."""
+    print("Wimbledon Champions:")
+    for name, count in sorted(champions.items()):
+        print(f"{name} {count}")
+
+    print(f"\nThese {len(countries)} countries have won Wimbledon:")
+    print(', '.join(countries))
