@@ -1,5 +1,5 @@
 """
-Word Occurrences Counter
+Email
 Estimate: 30 minutes
 Actual:   35 minutes
 """
