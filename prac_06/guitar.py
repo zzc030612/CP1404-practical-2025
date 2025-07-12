@@ -22,3 +22,7 @@ class Guitar:
         """Get the age of the guitar in years."""
         current_year = 2023  # Update this to the current year if needed
         return current_year - self.year
+
+    def is_vintage(self):
+        """Determine if the guitar is vintage (50+ years old)."""
+        return self.get_age() >= 50
