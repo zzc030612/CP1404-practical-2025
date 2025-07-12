@@ -10,6 +10,15 @@ def main():
     # Print details of a single language
     print(python)
 
+    # Create a list of programming languages
+    languages = [python, ruby, visual_basic]
+
+    # Find and print dynamically typed languages
+    print("The dynamically typed languages are:")
+    for language in languages:
+        if language.is_dynamic():
+            print(language.name)
+
 
 if __name__ == "__main__":
     main()
