@@ -39,6 +39,11 @@ def run_tests():
         if language.is_dynamic():
             print(language.name)
 
+    print("\nThe languages that support pointer arithmetic are:")
+    for language in languages:
+        if language.pointer_arithmetic:
+            print(language.name)
+
 
 if __name__ == "__main__":
     run_tests()
