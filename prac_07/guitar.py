@@ -16,8 +16,9 @@ class Guitar:
         return f"{self.name} ({self.year}) : ${self.cost:,.2f}"
 
     def get_age(self):
-        """Get the age of the guitar in years."""
-        current_year = 2023  # Update this to the current year if needed
+        """Get the age of the guitar based on the current year."""
+        from datetime import datetime
+        current_year = datetime.now().year
         return current_year - self.year
 
     def is_vintage(self):
