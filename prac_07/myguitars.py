@@ -55,3 +55,12 @@ def save_guitars(filename, guitars):
     with open(filename, "w") as file:
         for guitar in guitars:
             file.write(f"{guitar.name},{guitar.year},{guitar.cost}\n")
+
+def display_guitars(guitars):
+    """Display a list of guitars."""
+    for guitar in guitars:
+        print(guitar)
+
+
+if __name__ == "__main__":
+    main()
