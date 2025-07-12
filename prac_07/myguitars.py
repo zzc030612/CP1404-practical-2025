@@ -28,3 +28,30 @@ def main():
             guitars.append(Guitar(name, year, cost))
         except ValueError:
             print("Invalid input. Please enter valid data.")
+
+    # Save all guitars back to the file
+    save_guitars("guitars.csv", guitars)
+    print("\nGuitars have been saved to the file.")
+
+
+def load_guitars(filename):
+    """Load guitars from a CSV file."""
+    guitars = []
+    try:
+        with open(filename, "r") as file:
+            for line in file:
+                parts = line.strip().split(",")
+                name = parts[0]
+                year = int(parts[1])
+                cost = float(parts[2])
+                guitars.append(Guitar(name, year, cost))
+    except FileNotFoundError:
+        print(f"File '{filename}' not found. Starting with an empty list.")
+    return guitars
+
+
+def save_guitars(filename, guitars):
+    """Save guitars to a CSV file."""
+    with open(filename, "w") as file:
+        for guitar in guitars:
+            file.write(f"{guitar.name},{guitar.year},{guitar.cost}\n")
