@@ -9,3 +9,4 @@ class SquareNumberApp(App):
     def build(self):
         """ build the Kivy app from the kv file """
         Window.size = (500, 100)
+        self.title = "Square Number 2"
