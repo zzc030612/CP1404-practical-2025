@@ -19,3 +19,8 @@ class SquareNumberApp(App):
         try:
             result = float(value) ** 2
             self.root.ids.output_label.text = str(result)
+        except ValueError:
+            self.root.ids.output_label = ""
+
+
+SquareNumberApp().run()
